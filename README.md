@@ -12,5 +12,9 @@ git add .
 
 表单样式学习
 
-##获取ip方式
+## 获取ip方式
 https://api.ipify.org/
+
+## 网页插件 Pesticide for Chrome (without hover bar)
+
+
