@@ -1,0 +1,8 @@
+@import "./Variables/Varoables.scss";
+
+button {
+  @include buttonStyle();
+}
+.button {
+  @include buttonStyle2($blackColor, 35px);
+}
