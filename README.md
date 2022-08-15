@@ -26,3 +26,6 @@ min-height: 0.8rem;
 line-height: 0.8rem;
 font-size: 0.88rem;
 font-weight: 8rem;
+
+## Other Code 
+w-[11.7rem]
