@@ -85,3 +85,14 @@ class Promise {
     }
   }
   
+
+//   手写new
+function myNew(constructor, ...args) {
+    // Create a new object with the prototype of the constructor function
+    const instance = Object.create(constructor.prototype);
+    // Call the constructor with the new object as the `this` value
+    const result = constructor.apply(instance, args);
+    // If the constructor returns an object, use that instead of the new object
+    return (typeof result === "object" && result !== null) ? result : instance;
+  }
+  
