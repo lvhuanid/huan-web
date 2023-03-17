@@ -28,13 +28,15 @@
 // }
 
 
-// typeof 是 TypeScript 中的一个类型操作符，用于获取一个值的类型。具体来说，它可以用于获取一个变量或表达式的类型，并返回一个字符串表示该类型的名称。例如：
+// typeof 是 TypeScript 中的一个类型操作符，用于获取一个值的类型。
+// 具体来说，它可以用于获取一个变量或表达式的类型，并返回一个字符串表示该类型的名称。例如：
 let num = 123;
 let str = 'hello';
 
 console.log(typeof num); // 输出 "number"
 console.log(typeof str); // 输出 "string"
-// 在上面的例子中，typeof num 返回的值是字符串 "number"，表示变量 num 的类型是数字类型。同样地，typeof str 返回的值是字符串 "string"，表示变量 str 的类型是字符串类型。
+// 在上面的例子中，typeof num 返回的值是字符串 "number"，表示变量 num 的类型是数字类型。
+// 同样地，typeof str 返回的值是字符串 "string"，表示变量 str 的类型是字符串类型。
 
 // typeof 还可以用于检查对象是否具有指定的属性，例如：
 // interface Person {
@@ -49,13 +51,17 @@ console.log(typeof str); // 输出 "string"
 //   } else {
 //     console.log('person does not have name property');
 //   }
-// 在上面的例子中，我们使用 typeof person.name 来判断 person 对象是否具有 name 属性，并在条件语句中根据判断结果输出不同的信息。因为 typeof person.name 返回的值是字符串 "string"，所以条件判断的结果为 true，表明 person 对象具有 name 属性。
+// 在上面的例子中，我们使用 typeof person.name 来判断 person 对象是否具有 name 属性，
+// 并在条件语句中根据判断结果输出不同的信息。因为 typeof person.name 返回的值是字符串 "string"，
+// 所以条件判断的结果为 true，表明 person 对象具有 name 属性。
 
-// 1、类型断言操作符：可以用来告诉编译器变量的实际类型，类似于类型转换操作。类型断言操作符有两种写法，分别是<类型>值和值 as 类型，如下所示：
+// 1、类型断言操作符：可以用来告诉编译器变量的实际类型，类似于类型转换操作。
+// 类型断言操作符有两种写法，分别是<类型>值和值 as 类型，如下所示：
 let str1: any = 'hello world';
 let len1: number = (<string>str).length;
 let len2: number = (str as string).length;
-// 2、可选链操作符：用来简化访问对象属性或方法的代码，可以在属性或方法不存在时返回 undefined，避免程序抛出异常。可选链操作符是一个问号?，如下所示：
+// 2、可选链操作符：用来简化访问对象属性或方法的代码，可以在属性或方法不存在时返回 undefined，
+// 避免程序抛出异常。可选链操作符是一个问号?，如下所示：
 const person1 = {
     name: 'John',
     address: {
@@ -74,7 +80,8 @@ console.log(str2); // 输出 hello world
 const num1: number | undefined = undefined;
 const num2: number = num1!;
 
-// 5、索引类型查询操作符：用来获取某个类型的属性名称的联合类型，可以通过属性名来访问对象的属性。索引类型查询操作符是一个类型名加上方括号[]，如下所示：
+// 5、索引类型查询操作符：用来获取某个类型的属性名称的联合类型，可以通过属性名来访问对象的属性。
+// 索引类型查询操作符是一个类型名加上方括号[]，如下所示：
 interface Person {
     name: string;
     age1: number;
@@ -86,7 +93,9 @@ console.log(keys); // 输出 name
 
 
 // &：交叉类型
-// 在 TypeScript 中，& 符号表示交叉类型（Intersection Types），也可以称为并集类型或者合并类型。交叉类型是将多个类型合并成一个类型，表示这个变量需要同时满足多种类型的要求。可以将 & 读作 "and"，表示这个变量需要同时满足多个类型中的所有要求。
+// 在 TypeScript 中，& 符号表示交叉类型（Intersection Types），也可以称为并集类型或者合并类型。
+// 交叉类型是将多个类型合并成一个类型，表示这个变量需要同时满足多种类型的要求。可以将 & 读作 "and"，
+// 表示这个变量需要同时满足多个类型中的所有要求。
 
 // 例如，下面的代码定义了一个类型为 Person & Serializable 的变量，表示这个变量需要同时满足 Person 类型和 Serializable 类型的要求：
 interface Person {
