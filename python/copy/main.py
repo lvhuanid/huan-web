@@ -5,6 +5,7 @@ from tqdm import tqdm
 soup = BeautifulSoup(open("index.html"),features="lxml")
 images = soup.find_all('img')
 images = images[3:-1]
+// 1
 
 
 for image in tqdm(images):
