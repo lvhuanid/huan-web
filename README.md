@@ -27,5 +27,6 @@ line-height: 0.8rem;
 font-size: 0.88rem;
 font-weight: 8rem;
 
-## Other Code 
+## Other Code
+
 w-[11.7rem]
