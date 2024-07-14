@@ -30,3 +30,7 @@ font-weight: 8rem;
 ## Other Code
 
 w-[11.7rem]
+
+## 读法
+& ampersand /ˈæmpərsænd/ 或者 and符
+curly braces {}

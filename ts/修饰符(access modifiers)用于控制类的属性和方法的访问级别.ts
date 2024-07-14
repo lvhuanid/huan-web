@@ -1,0 +1,54 @@
+// 在TypeScript中，修饰符(access modifiers)用于控制类的属性和方法的访问级别。 TypeScript中有三种访问修饰符:
+
+// public: 公有访问修饰符，可以在类的内部和外部访问该属性或方法。
+// private: 私有访问修饰符，只能在类的内部访问该属性或方法。
+// protected: 受保护的访问修饰符，可以在类的内部和子类中访问该属性或方法。
+// 除了这三种访问修饰符之外，还有两种特殊的修饰符:
+
+// readonly: 只读修饰符，用于将属性设置为只读，即不能被修改。
+// static: 静态修饰符，用于定义静态属性或方法，即不需要实例化类就可以访问的属性和方法。
+// 举个例子，考虑以下 TypeScript 类的定义：
+class Person {
+    public name: string; // 公有属性
+    private age: number; // 私有属性
+    protected gender: string; // 受保护的属性
+    readonly id: number; // 只读属性
+    static count: number = 0; // 静态属性
+  
+    constructor(name: string, age: number, gender: string, id: number) {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+      this.id = id;
+      Person.count++;
+    }
+  
+    public greet() { // 公有方法
+      console.log(`Hello, my name is ${this.name}.`);
+    }
+  
+    private getBirthYear() { // 私有方法
+      const currentYear = new Date().getFullYear();
+      return currentYear - this.age;
+    }
+  
+    protected getGender() { // 受保护的方法
+      return this.gender;
+    }
+  
+    public static getCount() { // 静态方法
+      return Person.count;
+    }
+  }
+  
+  const person = new Person("Alice", 30, "female", 1);
+  person.name = "Bob"; // 可以访问公有属性 name
+  person.greet(); // 可以访问公有方法 greet
+//   person.age = 31; // 编译错误，不能访问私有属性 age
+//   person.getBirthYear(); // 编译错误，不能访问私有方法 getBirthYear
+//   person.gender = "male"; // 编译错误，不能访问受保护的属性 gender
+//   person.getGender(); // 编译错误，不能访问受保护的方法 getGender
+//   person.id = 2; // 编译错误，只读属性不能被修改
+  Person.count; // 可以访问静态属性 count
+  Person.getCount(); // 可以访问静态方法 getCount
+//   在上面的例子中，公有属性 name 和公有方法 greet 可以在类的内部和外部访问。而私有属性 age 和私有方法 getBirthYear 只能在类的内部访问，外部无法访问。受保护的属性 `gender
